@@ -1,46 +1,36 @@
 import React from 'react'
 
 const PieChart = ({ percentage = 90 }) => {
-  const radius = 82.5
-  const circumference = 2 * Math.PI * radius
-  const strokeDasharray = circumference
-  const strokeDashoffset = circumference - (percentage / 100) * circumference
+  const size = 100
+  const radius = size / 2
+  const angle = (percentage / 100) * 360
+  const radians = (angle - 90) * (Math.PI / 180)
+  const x = radius + radius * Math.cos(radians)
+  const y = radius + radius * Math.sin(radians)
+  const largeArcFlag = percentage > 50 ? 1 : 0
+
+  // Path for the yellow segment
+  const yellowPath = `
+    M ${radius} ${radius}
+    L ${radius} 0
+    A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x} ${y}
+    Z
+  `
 
   return (
     <div className="pie-chart-container">
-      <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-        <rect width="120" height="80" fill="#111C27"/>
-
-        {/* Background circle */}
+      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+        {/* Blue base */}
         <circle
-          cx="60"
-          cy="40"
-          r="35"
-          fill="none"
-          stroke="#21364A"
-          strokeWidth="3"
+          cx={radius}
+          cy={radius}
+          r={radius}
+          fill="#EAB308"
         />
-
-        {/* Progress circle */}
-        <circle
-          cx="60"
-          cy="40"
-          r="35"
-          fill="none"
-          stroke="#338FF2"
-          strokeWidth="3"
-          strokeDasharray={Math.PI * 70}
-          strokeDashoffset={Math.PI * 70 - (percentage / 100) * Math.PI * 70}
-          strokeLinecap="round"
-          transform="rotate(-90 60 40)"
-        />
-
-        {/* Yellow accent */}
+        {/* Yellow segment */}
         <path
-          d="M40 40L80 40"
-          stroke="#EAB308"
-          strokeWidth="3"
-          strokeLinecap="round"
+          d={yellowPath}
+          fill="#338FF2"
         />
       </svg>
     </div>
