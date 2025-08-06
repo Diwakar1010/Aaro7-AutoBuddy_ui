@@ -1,0 +1,235 @@
+.lead-allocation-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 24px 0 0 0; */
+  min-height: 100%;
+}
+
+.allocation-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* margin-bottom: 8px; */
+}
+
+.page-title {
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.leads-available-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 32px; */
+}
+
+.leads-available-card {
+  background: var(--bg-accent);
+  border-radius: 8px;
+  padding: 18px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+  margin-top: 8px;
+}
+
+.card-label {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.card-value {
+  color: var(--text-primary);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.allocation-form-row {
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 24px;
+  /* margin-bottom: 32px; */
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+}
+
+.form-section-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 260px;
+}
+
+.form-label {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.dropdown {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text-secondary);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.input-field {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text-primary);
+  font-size: 16px;
+  width: 100%;
+}
+
+.allocate-button {
+  background: #338FF2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  height: 44px;
+  margin-bottom: 2px;
+  transition: background 0.2s;
+}
+
+.allocate-button:hover {
+  background: #2563eb;
+}
+
+.allocation-history-section {
+  width: 100%;
+  /* max-width: 900px; */
+  /* margin: 0 auto; */
+  /* margin-top: 24px; */
+}
+
+.section-title {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 600;
+  /* margin-bottom: 16px; */
+  margin: 0px;
+}
+
+.history-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.history-table th,
+.history-table td {
+  padding: 14px 16px;
+  text-align: center;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 15px;
+}
+
+.history-table th {
+  color: var(--text-secondary);
+  font-weight: 600;
+  background: var(--bg-secondary);
+}
+
+.history-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  /* margin: 24px 0 0 0; */
+}
+
+.pagination-button {
+  background: var(--bg-secondary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pagination-button.active,
+.pagination-button:hover {
+  background: #338FF2;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .allocation-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .leads-available-card {
+    min-width: auto;
+  }
+
+  .allocation-form {
+    max-width: none;
+  }
+
+  .allocate-button {
+    max-width: none;
+    align-self: stretch;
+  }
+
+  .history-table {
+    font-size: 12px;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 8px;
+  }
+}

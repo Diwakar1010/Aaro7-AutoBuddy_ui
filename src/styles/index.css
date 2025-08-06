@@ -1,0 +1,230 @@
+:root {
+  --font: Manrope;
+  --bg-primary: #111C27;
+  --bg-secondary: #172633;
+  --bg-accent: #21364A;
+  --bg-button: #0D80F2;
+  --bg-active: #338FF2;
+  --text-primary: #FFF;
+  --text-secondary: #8FABCC;
+  --border-color: #304D69;
+  --border-light: #E5E8EB;
+  --chart-blue: #338FF2;
+  --chart-yellow: #EAB308;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Utility Classes */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 56px); /* 56px is the header height */
+}
+
+.sidebar {
+  height: calc(100vh - 56px); /* 56px is the header height */
+  margin-top: 0;
+  overflow-y: auto;
+}
+
+.page-container {
+  flex: 1;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: calc(100vh - 56px);
+}
+
+.card {
+  background: var(--bg-accent);
+  border-radius: 12px;
+  border: 1px solid var(--bg-accent);
+}
+
+.button-primary {
+  background: var(--bg-button);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 0 16px;
+  height: 40px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-primary:hover {
+  background: var(--bg-active);
+}
+
+.input-field {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text-primary);
+  font-family: Manrope;
+  font-size: 16px;
+  width: 100%;
+}
+
+.input-field::placeholder {
+  color: var(--text-secondary);
+}
+
+.dropdown {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #3D4D5C;
+}
+
+.table thead {
+  background: var(--bg-accent);
+}
+
+.table th {
+  padding: 12px 16px;
+  text-align: left;
+  color: var(--text-primary);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.table td {
+  padding: 8px 16px;
+  text-align: center;
+  color: var(--text-primary);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  border-top: 1px solid var(--border-light);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.pagination-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background: var(--bg-accent);
+  color: var(--text-primary);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-button.active {
+  background: var(--bg-active);
+}
+
+.pagination-button:hover {
+  background: var(--bg-active);
+}
+
+/* Chart Containers */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pie-chart {
+  width: 250px;
+  height: 165px;
+}
+
+.bar-chart {
+  width: 100%;
+  height: 238px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Ensure the header stays at the top */
+.header {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* Import component styles */
+@import './Sidebar.css';
+@import './Header.css';
+@import './Performance.css';
+@import './CREPerformance.css';
+@import './LeadAllocation.css';
+@import './Approvals.css';
+@import './ApprovalsDetail.css';
