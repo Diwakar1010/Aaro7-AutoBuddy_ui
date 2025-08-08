@@ -7,26 +7,33 @@ import LeadAllocation from './pages/LeadAllocation'
 import Approvals from './pages/Approvals'
 import ApprovalsDetail from './pages/ApprovalsDetail'
 import ManagerLogin from './pages/ManagerLogin'
+import LoginSelection from './pages/LoginSelection'
+import CRELogin from './pages/CRELogin'
+import MainDashboard from './pages/MainDashboard'
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ManagerLogin />} />
-        <Route
-          path="*"
-          element={
-            <Layout>
-              <Routes>
-                <Route path="/performance" element={<Performance />} />
-                <Route path="/cre-performance" element={<CREPerformance />} />
-                <Route path="/lead-allocation" element={<LeadAllocation />} />
-                <Route path="/approvals" element={<Approvals />} />
-                <Route path="/approvals/detail" element={<ApprovalsDetail />} />
-              </Routes>
-            </Layout>
-          }
-        />
+        {/* Public routes */}
+        <Route path="/" element={<MainDashboard />} />
+        <Route path="/manager-login" element={<ManagerLogin />} />
+        <Route path="/cre-login" element={<CRELogin />} />
+        <Route path="/login-select" element={<LoginSelection />} />
+
+        {/* Manager routes */}
+        <Route path="*" element={
+          <Layout>
+            <Routes>
+              <Route path="/performance" element={<Performance />} />
+              <Route path="/cre-performance" element={<CREPerformance />} />
+              <Route path="/lead-allocation" element={<LeadAllocation />} />
+              <Route path="/approvals" element={<Approvals />} />
+              <Route path="/approvals/detail" element={<ApprovalsDetail />} />
+            </Routes>
+          </Layout>
+        } />
+       
       </Routes>
     </Router>
   )
