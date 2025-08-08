@@ -7,7 +7,6 @@
 .performance-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 8px;
   flex-shrink: 0;
 }
@@ -24,6 +23,55 @@
 .time-selector {
   width: 235px;
   height: 40px;
+
+}
+
+.dropdown {
+  background: #182135;
+  border-radius: 8px;
+  border: 1px solid #22304a;
+  padding: 10px 16px;
+  color: #b3c6e0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  min-width: 140px;
+  user-select: none;
+}
+
+.dropdown svg {
+  margin-left: 8px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #172633;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 20;
+  padding: 6px 0;
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  color: #b3c6e0;
+  cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover,
+.dropdown-item.selected {
+  /* background: #22304a; */
+  background: #21364A;
+  color: #fff;
 }
 
 .performance-content {
@@ -79,7 +127,7 @@
 .ai-insights-card {
   display: flex;
   align-items: center;
-  background: #232b3a;
+  background: #172633;
   border-radius: 12px;
   padding: 18px 28px;
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
