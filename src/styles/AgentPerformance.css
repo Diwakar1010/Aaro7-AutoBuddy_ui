@@ -267,7 +267,7 @@
 }
 
 /* AI Insights card styles */
-.ai-insights-card {
+.ai-insights-card-agent {
   background: #1B2B3A;
   padding-bottom: 0px;
   display: flex;
@@ -275,7 +275,7 @@
   color: #EAF6FF;
 }
 
-.ai-insights-card .card-title {
+.ai-insights-card-agent .card-title {
   font-size: 15px;
   margin-bottom: 8px;
 }
@@ -373,7 +373,7 @@
     grid-template-columns: repeat(6, 1fr);
   }
   .custom-card-large,
-  .ai-insights-card {
+  .ai-insights-card-agent {
     grid-column: 1 / span 6;
   }
   .custom-card-tall {
@@ -387,7 +387,7 @@
     grid-template-columns: 1fr;
   }
   .custom-card-large,
-  .ai-insights-card,
+  .ai-insights-card-agent,
   .custom-card-tall {
     grid-column: 1 / -1;
   }

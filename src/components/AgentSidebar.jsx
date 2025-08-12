@@ -46,7 +46,6 @@ const AgentSidebar = () => {
 
   return (
     <div className="agent-sidebar">
-      <div className="agent-sidebar-top">
         <nav className="agent-sidebar-nav">
           {menuItems.map((item) => (
             <Link
@@ -59,7 +58,6 @@ const AgentSidebar = () => {
             </Link>
           ))}
         </nav>
-      </div>
     </div>
   )
 }

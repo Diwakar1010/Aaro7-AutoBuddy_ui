@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   flex-shrink: 0;
 }
 
@@ -17,28 +17,55 @@
   font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 32px;
   margin: 0;
 }
 
 .month-view-dropdown {
-  display: flex;
   width: 235px;
   height: 40px;
-  border-radius: 12px;
+}
+.agent-dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #172633;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 20;
+  padding: 6px 0;
 }
 
-.dropdown-left {
-  display: flex;
-  padding: 15px 8px 15px 15px;
-  align-items: center;
-  flex: 1 0 0;
-  border-radius: 12px 0 0 12px;
-  border-top: 1px solid #304D69;
-  border-bottom: 1px solid #304D69;
-  border-left: 1px solid #304D69;
-  background: #172633;
+.agent-dropdown-item {
+  padding: 10px 16px;
+  color: #8FABCC;
   cursor: pointer;
+  background: transparent;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.agent-dropdown-item:hover,
+.agent-dropdown-item.selected {
+  background: #21364A;
+  color: #fff;
+}
+
+.agent-dropdown {
+  background: #172633;
+  border-radius: 8px;
+  border: 1px solid #304D69;
+  padding: 10px 16px;
+  color: #8FABCC;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  min-width: 140px;
+  user-select: none;
 }
 
 .dropdown-text {
@@ -65,7 +92,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  /* gap: 24px; */
 }
 
 .earnings-metrics-grid {
@@ -78,11 +105,12 @@
 .earnings-metric-card {
   display: flex;
   min-width: 158px;
-  padding: 24px;
+  padding: 10px;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  border-radius: 12px;
+  min-height: 48px;
+  border-radius: 8px;
   background: #21364A;
 }
 
@@ -105,7 +133,7 @@
 .earnings-metric-row {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
 }
 
 .earnings-icon {
@@ -130,7 +158,7 @@
 .earnings-chart-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .chart-section-title {
@@ -144,7 +172,7 @@
 
 .earnings-bar-chart {
   width: 100%;
-  height: 335px;
+  /* height: 335px; */
   border-radius: 12px;
   background: #0F1C26;
   position: relative;
@@ -153,7 +181,7 @@
 .chart-wrapper {
   display: flex;
   height: 100%;
-  padding: 29px 44px 50px 72px;
+  /* padding: 29px 44px 50px 72px; */
 }
 
 .y-axis {
@@ -241,7 +269,7 @@
 .earnings-breakdown-card {
   display: flex;
   min-width: 158px;
-  padding: 24px;
+  padding: 20px;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
@@ -274,7 +302,7 @@
 .earnings-breakdown-row {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
 }
 
 .earnings-breakdown-value {

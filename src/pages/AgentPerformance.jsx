@@ -166,7 +166,7 @@ const AgentPerformance = () => {
           </div>
 
           {/* Insights card moved visually below custom-card-large and over sidebar */}
-          <div className="custom-card ai-insights-card floating-insight">
+          <div className="custom-card ai-insights-card-agent floating-insight">
             <div className="card-inner">
               <h4 className="card-title">AI Insights for you</h4>
               <ul className="insights-list">
