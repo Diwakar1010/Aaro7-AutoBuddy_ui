@@ -1,3 +1,16 @@
+/* Import component styles */
+@import './Sidebar.css';
+@import './Header.css';
+@import './AgentSidebar.css';
+@import './AgentHeader.css';
+@import './Performance.css';
+@import './AgentPerformance.css';
+@import './AgentEarnings.css';
+@import './CREPerformance.css';
+@import './LeadAllocation.css';
+@import './Approvals.css';
+@import './ApprovalsDetail.css';
+
 :root {
   --font: Manrope;
   --bg-primary: #111C27;
@@ -219,12 +232,3 @@ body {
   z-index: 2;
   flex-shrink: 0;
 }
-
-/* Import component styles */
-@import './Sidebar.css';
-@import './Header.css';
-@import './Performance.css';
-@import './CREPerformance.css';
-@import './LeadAllocation.css';
-@import './Approvals.css';
-@import './ApprovalsDetail.css';

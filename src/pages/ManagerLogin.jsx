@@ -10,7 +10,8 @@ const ManagerLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     // Add your login logic here if needed
-    navigate('/performance')
+    console.log("logged In ")
+    navigate('/manager/performance')
   }
 
   return (

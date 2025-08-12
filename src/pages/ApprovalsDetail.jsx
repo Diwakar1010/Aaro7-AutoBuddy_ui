@@ -29,7 +29,7 @@ const ApprovalsDetail = () => {
     <div className="approvals-detail-page">
       <div className="detail-header">
         <h1 className="page-title">Approvals</h1>
-        <Link to="/approvals" className="back-button">
+        <Link to="/manager/approvals" className="back-button">
           &lt;&lt; Back
         </Link>
       </div>

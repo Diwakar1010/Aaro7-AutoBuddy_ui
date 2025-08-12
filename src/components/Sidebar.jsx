@@ -7,7 +7,7 @@ const Sidebar = () => {
 
   const menuItems = [
     {
-      path: '/performance',
+      path: '/manager/performance',
       label: 'Performance',
       icon: (
         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,7 +16,7 @@ const Sidebar = () => {
       )
     },
     {
-      path: '/cre-performance',
+      path: '/manager/cre-performance',
       label: 'CRE Performance',
       icon: (
         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@ const Sidebar = () => {
       )
     },
     {
-      path: '/earnings',
+      path: '/manager/earnings',
       label: 'Earnings',
       icon: (
         <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,7 @@ const Sidebar = () => {
       )
     },
     {
-      path: '/lead-allocation',
+      path: '/manager/lead-allocation',
       label: 'Lead Allocation',
       icon: (
         <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,7 @@ const Sidebar = () => {
       )
     },
     {
-      path: '/approvals',
+      path: '/manager/approvals',
       label: 'Approvals',
       icon: (
         <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +52,7 @@ const Sidebar = () => {
       )
     },
     {
-      path: '/settings',
+      path: '/manager/settings',
       label: 'Settings',
       icon: (
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

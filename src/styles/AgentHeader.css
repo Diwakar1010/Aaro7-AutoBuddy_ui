@@ -1,0 +1,142 @@
+.agent-header {
+  display: flex;
+  width: 100%;
+  padding: 12px 40px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E5E8EB;
+  background: #111C27;
+  height: 65px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.agent-header-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.agent-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #FFF;
+  font-family: 'Public Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.agent-header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 32px;
+  flex: 1;
+}
+
+.agent-search-container {
+  display: flex;
+  min-width: 160px;
+  max-width: 256px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.agent-search-input {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  align-self: stretch;
+  border-radius: 8px;
+  background: #243847;
+  padding-left: 16px;
+}
+
+.agent-search-input input {
+  display: flex;
+  padding: 8px 16px 8px 8px;
+  align-items: center;
+  flex: 1;
+  align-self: stretch;
+  border-radius: 0 8px 8px 0;
+  background: #243847;
+  border: none;
+  outline: none;
+  color: #94B2C7;
+  font-family: 'Public Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.agent-search-input input::placeholder {
+  color: #94B2C7;
+}
+
+.agent-help-icon {
+  display: flex;
+  height: 40px;
+  max-width: 480px;
+  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #243847;
+  cursor: pointer;
+}
+
+.agent-user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.agent-user-role {
+  color: #FFF;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.agent-user-avatar {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.agent-profile-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: url(https://api.builder.io/api/v1/image/assets/TEMP/6d7685bc4e15e544767b90f144ade947704e1e96?width=80) lightgray 50% / cover no-repeat;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .agent-header {
+    padding: 8px 16px;
+    height: 56px;
+  }
+
+  .agent-header-right {
+    gap: 16px;
+  }
+
+  .agent-search-container {
+    min-width: 120px;
+    max-width: 200px;
+  }
+
+  .agent-user-role {
+    display: none;
+  }
+}

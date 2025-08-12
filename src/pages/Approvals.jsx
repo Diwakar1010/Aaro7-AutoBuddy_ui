@@ -25,7 +25,7 @@ const Approvals = () => {
         {approvalDates.map((item, index) => (
           <Link
             key={index}
-            to={item.isToday ? "/approvals/detail" : "#"}
+            to={item.isToday ? "/manager/approvals/detail" : "#"}
             className={`approval-item ${item.isToday ? 'today' : ''}`}
           >
             <div className="approval-date">{item.date}</div>

@@ -10,7 +10,7 @@ const CRELogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     // Add your login logic here if needed
-    navigate('/performance')
+    navigate('/agent/performance')
   }
 
   return (

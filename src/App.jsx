@@ -1,7 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import AgentLayout from './components/AgentLayout'
 import Performance from './pages/Performance'
+import AgentPerformance from './pages/AgentPerformance'
+import AgentEarnings from './pages/AgentEarnings'
 import CREPerformance from './pages/CREPerformance'
 import LeadAllocation from './pages/LeadAllocation'
 import Approvals from './pages/Approvals'
@@ -21,8 +24,18 @@ function App() {
         <Route path="/cre-login" element={<CRELogin />} />
         <Route path="/login-select" element={<LoginSelection />} />
 
+        {/* Agent routes */}
+        <Route path="/agent/*" element={
+          <AgentLayout>
+            <Routes>
+              <Route path="/performance" element={<AgentPerformance />} />
+              <Route path="/earnings" element={<AgentEarnings />} />
+            </Routes>
+          </AgentLayout>
+        } />
+
         {/* Manager routes */}
-        <Route path="*" element={
+        <Route path="/manager/*" element={
           <Layout>
             <Routes>
               <Route path="/performance" element={<Performance />} />
